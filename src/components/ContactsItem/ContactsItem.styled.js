@@ -6,7 +6,8 @@ import styled from '@emotion/styled';
   font-weight: 500;
   align-items: flex-end;
   font-weight: 600;
-   text-transform: uppercase;
+  
+    text-transform: none;
 `;
 
  const ItemName = styled.p`
@@ -37,7 +38,7 @@ import styled from '@emotion/styled';
     background-color: #ff4742;
     color: #fff;
                 }
-                
+                margin-left: auto; 
   }
 `;
 

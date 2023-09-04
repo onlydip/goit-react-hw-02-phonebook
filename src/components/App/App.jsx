@@ -65,12 +65,13 @@ export default class App extends Component {
       <Section>
         <FirstTitle>Phonebook</FirstTitle>
         <Phonebook onSubmit={this.contactHandler} title="Phonebook" />
+          <SecondTitle>Contacts</SecondTitle>
         <Filter
           value={filter}
           title="Find contacts by name:"
           onChange={this.handleSearchChange}
         />
-        <SecondTitle>Contacts</SecondTitle>
+      
         <ContactsList
           title="Contacts"
           filteredContacts={this.onFilteredContacts(filter)}

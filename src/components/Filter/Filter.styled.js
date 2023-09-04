@@ -5,6 +5,7 @@ import styled from '@emotion/styled';
   flex-direction: column;
   font-weight: 600;
    text-transform: uppercase;
+   marging-bottom:20px;
 
 `;
 
