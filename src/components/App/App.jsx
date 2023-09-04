@@ -20,22 +20,24 @@ export default class App extends Component {
     filter: '',
   };
 
-  contactHandler = data => {
-    const { contacts } = this.state;
-    const findContact = contacts.find(contact => contact.name === data.name);
-    if (findContact) {
-      alert(`${data.name} is already in contact`);
-    } else {
-      const contact = {
-        id: nanoid(),
-        ...data,
-      };
-      contacts.push(contact);
-      this.setState({
-        contacts,
-      });
-    }
-  };
+contactHandler = data => {
+  const { contacts } = this.state;
+  const findContact = contacts.find(
+    contact => contact.name.toLowerCase() === data.name.toLowerCase()
+  );
+  if (findContact) {
+    alert(`${data.name} is already in contact`);
+  } else {
+    const contact = {
+      id: nanoid(),
+      ...data,
+    };
+    this.setState(prevState => ({
+      contacts: [...prevState.contacts, contact],
+    }));
+  }
+};
+
 
   handleSearchChange = e => {
     const { name, value } = e.currentTarget;
