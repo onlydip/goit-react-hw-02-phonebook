@@ -3,7 +3,7 @@ import { nanoid } from 'nanoid';
 import Section  from 'components/Section';
 import  Phonebook  from 'components/Phonebook';
 import  ContactsList  from 'components/ContactsList';
-import  Filter  from 'components/Filter';
+import  ContactFilter  from 'components/ContactFilter';
 
 
 
@@ -66,7 +66,7 @@ export default class App extends Component {
         <FirstTitle>Phonebook</FirstTitle>
         <Phonebook onSubmit={this.contactHandler} title="Phonebook" />
           <SecondTitle>Contacts</SecondTitle>
-        <Filter
+        <ContactFilter
           value={filter}
           title="Find contacts by name:"
           onChange={this.handleSearchChange}

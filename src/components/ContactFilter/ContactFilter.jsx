@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import { FilterLabel, FilterInput } from './Filter.styled';
+import { FilterLabel, FilterInput } from './ContactFilter.styled';
 
-export default function Filter({ onChange, title, value }) {
+export default function ContactFilter({ onChange, title, value }) {
   return (
     <FilterLabel htmlFor="filter">
       {title}
@@ -16,7 +16,7 @@ export default function Filter({ onChange, title, value }) {
   );
 }
 
-Filter.propTypes = {
+ContactFilter.propTypes = {
   onChange: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
